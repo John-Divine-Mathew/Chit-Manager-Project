@@ -10,24 +10,24 @@ const Contact = () => {
     <section className="section section-light page-section" id="contact" style={{ position: 'relative', backgroundColor: '#f8fafc' }}>
       
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-        <div className="contact-banner-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', alignItems: 'center', marginBottom: '4rem', padding: '2rem 0' }}>
+        <div className="contact-banner-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', alignItems: 'center', marginBottom: '2rem', padding: '0 0 1rem 0' }}>
           <div className="contact-banner-content">
-            <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: '800', lineHeight: 1.1, color: '#0f172a', marginBottom: '1.5rem' }}>
+            <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: '800', lineHeight: 1.1, color: '#0f172a', marginBottom: '1.25rem' }}>
               {t('contact.titlePrefix')} <br/>
               {t('contact.titleWith')} <span style={{ color: 'var(--primary-color)' }}>{t('contact.titleBrand')}</span>
             </h1>
-            <p style={{ fontSize: '1.2rem', color: '#64748b', maxWidth: '450px', lineHeight: 1.6 }}>
+            <p style={{ fontSize: '1.15rem', color: '#64748b', maxWidth: '450px', lineHeight: 1.6 }}>
               {t('contact.subtitle')}
             </p>
           </div>
           <div className="contact-banner-image" style={{ display: 'flex', justifyContent: 'center' }}>
-            <img src={contactImg} alt={t('contact.agentAlt')} className="slide-in-right" style={{ maxWidth: '100%', height: 'auto', maxHeight: '450px', borderRadius: '12px' }} />
+            <img src={contactImg} alt={t('contact.agentAlt')} className="slide-in-right" style={{ maxWidth: '100%', height: 'auto', maxHeight: '420px', borderRadius: '12px' }} />
           </div>
         </div>
         
         <div className="contact-grid">
           
-          <div className="contact-form-card contact-info-list" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+          <div className="contact-form-card contact-info-list" style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
             <div className="contact-item" style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
               <div className="contact-icon" style={{ background: 'rgba(16,185,129,0.1)', color: '#10b981', padding: '1rem', borderRadius: '0.75rem' }}>
                 <Phone size={24} />

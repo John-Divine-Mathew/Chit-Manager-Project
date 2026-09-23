@@ -19,7 +19,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="hero" id="home" style={{ position: 'relative', overflow: 'hidden', backgroundColor: '#e9f7f1', padding: '6rem 0 4rem 0' }}>
+    <section className="hero" id="home" style={{ position: 'relative', overflow: 'hidden', backgroundColor: '#e9f7f1' }}>
       <div className="container hero-container" style={{ position: 'relative', zIndex: 1 }}>
         <div className="hero-content">
           <div className="badge animate-fade-in-up">{t('hero.badge')}</div>
@@ -44,43 +44,43 @@ const Hero = () => {
             </button>
           </div>
 
-          <div className="hero-features animate-fade-in-up delay-400" style={{ display: 'flex', gap: '2rem', marginTop: '3rem', flexWrap: 'nowrap', overflowX: 'auto', paddingBottom: '1rem' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', flex: '0 0 auto' }}>
-              <div style={{ background: 'white', padding: '0.75rem', borderRadius: '50%', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)', color: 'var(--primary-color)' }}>
-                <ShieldCheck size={24} />
+          <div className="hero-features animate-fade-in-up delay-400">
+            <div className="hero-feature-item">
+              <div className="hero-feature-icon">
+                <ShieldCheck size={22} />
               </div>
-              <span style={{ fontSize: '0.75rem', fontWeight: '700', color: '#334155', textAlign: 'center' }}>
+              <span>
                 {renderMultiLine(t('hero.features.secure'))}
               </span>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', flex: '0 0 auto' }}>
-              <div style={{ background: 'white', padding: '0.75rem', borderRadius: '50%', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)', color: 'var(--primary-color)' }}>
-                <Zap size={24} />
+            <div className="hero-feature-item">
+              <div className="hero-feature-icon">
+                <Zap size={22} />
               </div>
-              <span style={{ fontSize: '0.75rem', fontWeight: '700', color: '#334155', textAlign: 'center' }}>
+              <span>
                 {renderMultiLine(t('hero.features.processing'))}
               </span>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', flex: '0 0 auto' }}>
-              <div style={{ background: 'white', padding: '0.75rem', borderRadius: '50%', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)', color: 'var(--primary-color)' }}>
-                <Users size={24} />
+            <div className="hero-feature-item">
+              <div className="hero-feature-icon">
+                <Users size={22} />
               </div>
-              <span style={{ fontSize: '0.75rem', fontWeight: '700', color: '#334155', textAlign: 'center' }}>
+              <span>
                 {renderMultiLine(t('hero.features.management'))}
               </span>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', flex: '0 0 auto' }}>
-              <div style={{ background: 'white', padding: '0.75rem', borderRadius: '50%', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)', color: 'var(--primary-color)' }}>
-                <Award size={24} />
+            <div className="hero-feature-item">
+              <div className="hero-feature-icon">
+                <Award size={22} />
               </div>
-              <span style={{ fontSize: '0.75rem', fontWeight: '700', color: '#334155', textAlign: 'center' }}>
+              <span>
                 {renderMultiLine(t('hero.features.platform'))}
               </span>
             </div>
           </div>
         </div>
-        <div className="animate-fade-in-up delay-400" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <img src={heroImg} alt={t('hero.previewAlt')} style={{ maxWidth: '100%', height: 'auto', objectFit: 'contain' }} />
+        <div className="animate-fade-in-up delay-400 hero-preview-wrapper" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <img src={heroImg} alt={t('hero.previewAlt')} className="hero-mockup-img" style={{ maxWidth: '100%', maxHeight: '480px', height: 'auto', width: 'auto', objectFit: 'contain' }} />
         </div>
       </div>
     </section>
