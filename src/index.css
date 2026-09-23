@@ -1251,14 +1251,13 @@ p {
   }
 
   .footer-logo {
-    display: flex;
-    justify-content: center;
+    display: inline-block;
   }
 
   .footer-logo-img {
     height: 56px;
     max-width: 220px;
-    margin: 0 auto;
+    margin: 0;
   }
 }
 
