@@ -160,7 +160,7 @@ const BookDemoModal = ({ isOpen, onClose }) => {
                 {/* Full Name */}
                 <div className="demo-field-group">
                   <label htmlFor="demo-full-name">
-                    {t('bookDemo.fullName')} <span className="text-danger">*</span>
+                    <span>{t('bookDemo.fullName')}</span>&nbsp;<span className="text-danger">*</span>
                   </label>
                   <input
                     id="demo-full-name"
@@ -176,7 +176,7 @@ const BookDemoModal = ({ isOpen, onClose }) => {
                 {/* Business / Chit Fund Name */}
                 <div className="demo-field-group">
                   <label htmlFor="demo-business-name">
-                    {t('bookDemo.businessName')} <span className="text-danger">*</span>
+                    <span>{t('bookDemo.businessName')}</span>&nbsp;<span className="text-danger">*</span>
                   </label>
                   <input
                     id="demo-business-name"
@@ -192,7 +192,7 @@ const BookDemoModal = ({ isOpen, onClose }) => {
                 {/* Mobile / WhatsApp Number */}
                 <div className="demo-field-group">
                   <label htmlFor="demo-mobile">
-                    {t('bookDemo.mobile')} <span className="text-danger">*</span>
+                    <span>{t('bookDemo.mobile')}</span>&nbsp;<span className="text-danger">*</span>
                   </label>
                   <input
                     id="demo-mobile"
@@ -211,7 +211,7 @@ const BookDemoModal = ({ isOpen, onClose }) => {
                 {/* Number of Active Chit Groups */}
                 <div className="demo-field-group">
                   <label htmlFor="demo-active-groups">
-                    {t('bookDemo.activeGroups')} <span className="text-danger">*</span>
+                    <span>{t('bookDemo.activeGroups')}</span>&nbsp;<span className="text-danger">*</span>
                   </label>
                   <select
                     id="demo-active-groups"

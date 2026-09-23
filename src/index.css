@@ -1263,7 +1263,7 @@ html[lang="ta"] .footer-bottom {
 .book-demo-modal {
   position: relative;
   width: 100%;
-  max-width: 580px;
+  max-width: 630px;
   background-color: #ffffff;
   border-radius: 1.25rem;
   border: 1px solid var(--border-color);
@@ -1353,39 +1353,59 @@ html[lang="ta"] .footer-bottom {
 .demo-form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem 1.25rem;
+  gap: 1.1rem 1.25rem;
   margin-bottom: 1.75rem;
+  align-items: start;
 }
 
 .demo-field-group {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.35rem;
   text-align: left;
 }
 
 .demo-field-group label {
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: var(--text-main);
+  min-height: 1.35rem;
+  display: flex;
+  align-items: center;
+  line-height: 1.3;
 }
 
 .text-danger {
   color: #ef4444;
+  white-space: nowrap;
 }
 
 .demo-input,
 .demo-select {
   width: 100%;
-  padding: 0.75rem 0.95rem;
+  padding: 0.7rem 0.85rem;
   border: 1px solid var(--border-color);
   border-radius: 0.65rem;
-  font-size: 0.925rem;
+  font-size: 0.875rem;
   font-family: inherit;
   color: var(--text-main);
   background-color: #ffffff;
   transition: border-color 0.2s, box-shadow 0.2s;
   outline: none;
+  box-sizing: border-box;
+}
+
+.demo-input::placeholder {
+  font-size: 0.8125rem;
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.demo-select {
+  font-size: 0.85rem;
+  color: var(--text-main);
+  cursor: pointer;
+  padding-right: 1.75rem;
 }
 
 .demo-input:focus,
@@ -1525,20 +1545,25 @@ html[lang="ta"] .modal-subtitle {
 html[lang="ta"] .demo-field-group label {
   font-family: "Noto Sans Tamil", "Noto Sans", system-ui, sans-serif;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.825rem;
   line-height: 1.35;
+  min-height: 1.45rem;
+  display: flex;
+  align-items: center;
 }
 
 html[lang="ta"] .demo-input,
 html[lang="ta"] .demo-select {
   font-family: "Noto Sans Tamil", "Noto Sans", system-ui, sans-serif;
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 html[lang="ta"] .demo-input::placeholder {
   font-family: "Noto Sans Tamil", "Noto Sans", system-ui, sans-serif;
+  font-size: 0.8rem;
   font-weight: 400;
+  color: #94a3b8;
 }
 
 html[lang="ta"] .field-error-msg {
