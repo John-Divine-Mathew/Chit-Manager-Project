@@ -10,7 +10,7 @@ const Reports = () => {
   const reportsList = Array.isArray(reports) ? reports : [];
 
   return (
-    <section className="section" id="reports">
+    <section className="section page-section" id="reports">
       <div className="container">
         <div className="reports-layout">
           <div className="reports-content">

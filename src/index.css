@@ -69,6 +69,35 @@ button {
   padding: 5rem 0;
 }
 
+/* Standalone Route Pages Top Clearance (Ensures content is never underlaid by fixed navbar) */
+.page-section,
+main > section:first-child:not(.hero),
+.main-content > section:first-child:not(.hero) {
+  padding-top: 7.25rem !important;
+}
+
+@media (max-width: 768px) {
+  .page-section,
+  main > section:first-child:not(.hero),
+  .main-content > section:first-child:not(.hero),
+  html[lang="ta"] .page-section,
+  html[lang="ta"] main > section:first-child:not(.hero),
+  html[lang="ta"] .main-content > section:first-child:not(.hero) {
+    padding-top: 6.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-section,
+  main > section:first-child:not(.hero),
+  .main-content > section:first-child:not(.hero),
+  html[lang="ta"] .page-section,
+  html[lang="ta"] main > section:first-child:not(.hero),
+  html[lang="ta"] .main-content > section:first-child:not(.hero) {
+    padding-top: 5.75rem !important;
+  }
+}
+
 .section-light {
   background-color: var(--bg-light);
 }
@@ -844,9 +873,9 @@ p {
 }
 
 .footer-logo-img {
-  height: 64px;
+  height: 76px;
   width: auto;
-  max-width: 250px;
+  max-width: 290px;
   object-fit: contain;
   display: block;
   filter: drop-shadow(0 4px 14px rgba(37, 99, 235, 0.25));
@@ -1036,6 +1065,7 @@ p {
     margin-left: auto;
   }
 
+  .lang-capsule-btn,
   .mobile-lang-capsule-btn {
     display: inline-flex;
     align-items: center;
@@ -1050,15 +1080,18 @@ p {
     -webkit-tap-highlight-color: transparent;
   }
 
+  .lang-capsule-btn:hover,
   .mobile-lang-capsule-btn:hover {
     border-color: rgba(16, 185, 129, 0.4);
     box-shadow: 0 2px 8px rgba(16, 185, 129, 0.15);
   }
 
+  .lang-capsule-btn:active,
   .mobile-lang-capsule-btn:active {
     transform: scale(0.95);
   }
 
+  .lang-circle-img,
   .mobile-lang-circle-img {
     width: 28px;
     height: 28px;
@@ -1070,6 +1103,7 @@ p {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   }
 
+  .lang-capsule-label,
   .mobile-lang-capsule-label {
     font-size: 0.8rem;
     font-weight: 700;
@@ -1255,16 +1289,16 @@ p {
   }
 
   .footer-logo-img {
-    height: 56px;
-    max-width: 220px;
+    height: 68px;
+    max-width: 260px;
     margin: 0;
   }
 }
 
 @media (max-width: 480px) {
   .footer-logo-img {
-    height: 48px;
-    max-width: 190px;
+    height: 60px;
+    max-width: 240px;
   }
 
   /* Ensure dummy chart doesn't overflow */
@@ -1284,17 +1318,20 @@ p {
     gap: 0.5rem;
   }
 
+  .lang-capsule-btn,
   .mobile-lang-capsule-btn {
     padding: 2px 8px 2px 3px;
     gap: 0.35rem;
   }
 
+  .lang-circle-img,
   .mobile-lang-circle-img {
     width: 26px;
     height: 26px;
     clip-path: circle(50% at 50% 50%);
   }
 
+  .lang-capsule-label,
   .mobile-lang-capsule-label {
     font-size: 0.75rem;
   }
@@ -1491,8 +1528,84 @@ p {
 }
 
 /* ==================================================
-   LANGUAGE SWITCHER - SLEEK EXECUTIVE SEGMENTED CONTROL
+   EXECUTIVE CAPSULE LANGUAGE BUTTON (ALL DEVICES)
+   Standardized premium capsule across desktop, tablet, and mobile
 ================================================== */
+.lang-capsule-btn,
+.mobile-lang-capsule-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 9999px;
+  padding: 4px 12px 4px 5px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  position: relative;
+  outline: none;
+  font-family: inherit;
+  flex-shrink: 0;
+}
+
+.lang-capsule-btn:hover,
+.mobile-lang-capsule-btn:hover {
+  border-color: rgba(16, 185, 129, 0.5);
+  background: #f8fafc;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15), 0 2px 4px rgba(0, 0, 0, 0.04);
+  transform: translateY(-1px);
+}
+
+.lang-capsule-btn:active,
+.mobile-lang-capsule-btn:active {
+  transform: translateY(0) scale(0.96);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.lang-capsule-btn:focus-visible,
+.mobile-lang-capsule-btn:focus-visible {
+  outline: 2px solid var(--primary, #10b981);
+  outline-offset: 2px;
+}
+
+.lang-circle-img,
+.mobile-lang-circle-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  clip-path: circle(50% at 50% 50%);
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lang-capsule-btn:hover .lang-circle-img,
+.mobile-lang-capsule-btn:hover .mobile-lang-circle-img {
+  transform: scale(1.06);
+}
+
+.lang-capsule-label,
+.mobile-lang-capsule-label {
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: var(--text-main, #0f172a);
+  letter-spacing: 0.015em;
+  line-height: 1;
+  font-family: "Noto Sans Tamil", "Noto Sans", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  transition: color 0.2s ease;
+}
+
+.lang-capsule-btn:hover .lang-capsule-label,
+.mobile-lang-capsule-btn:hover .mobile-lang-capsule-label {
+  color: var(--primary, #10b981);
+}
+
+/* Backwards compatibility for old segmented control if ever referenced */
 .lang-switcher {
   display: inline-flex;
   align-items: center;
@@ -1501,14 +1614,6 @@ p {
   border: 1px solid #e2e8f0;
   padding: 3px;
   border-radius: 9999px;
-  user-select: none;
-  box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.04);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.lang-switcher:hover {
-  border-color: #cbd5e1;
-  background: #e9eff5;
 }
 
 .lang-btn {
@@ -1524,27 +1629,11 @@ p {
   cursor: pointer;
   font-size: 0.8125rem;
   font-weight: 600;
-  letter-spacing: 0.01em;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  line-height: 1;
-  white-space: nowrap;
-}
-
-.lang-btn:hover:not(.active) {
-  color: var(--text-main);
-  background: rgba(255, 255, 255, 0.7);
 }
 
 .lang-btn.active {
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: #ffffff;
-  font-weight: 600;
-  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25);
-}
-
-.lang-btn:focus-visible {
-  outline: 2px solid var(--primary);
-  outline-offset: 1px;
 }
 
 .mobile-lang-wrapper {
@@ -2337,8 +2426,351 @@ html[lang="ta"] .footer-bottom {
 }
 
 /* ==================================================
+   ENGLISH TYPOGRAPHY ENHANCEMENT
+   Make bold letters, headings, card titles, badges & buttons larger and punchier
+================================================== */
+html[lang="en"] h1,
+html:not([lang="ta"]) h1,
+html[lang="en"] .hero-title,
+html:not([lang="ta"]) .hero-title {
+  font-size: clamp(3rem, 5.5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+html[lang="en"] h2,
+html:not([lang="ta"]) h2,
+html[lang="en"] .section-title,
+html:not([lang="ta"]) .section-title {
+  font-size: clamp(2.35rem, 4vw, 2.95rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+html[lang="en"] h3,
+html:not([lang="ta"]) h3,
+html[lang="en"] .reason-title,
+html:not([lang="ta"]) .reason-title {
+  font-size: 1.375rem;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+}
+
+html[lang="en"] h4,
+html:not([lang="ta"]) h4,
+html[lang="en"] .step-title,
+html:not([lang="ta"]) .step-title {
+  font-size: 1.275rem;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+}
+
+html[lang="en"] .feature-name,
+html:not([lang="ta"]) .feature-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+html[lang="en"] .step-number,
+html:not([lang="ta"]) .step-number {
+  font-size: 2.15rem;
+  font-weight: 800;
+}
+
+html[lang="en"] .badge,
+html:not([lang="ta"]) .badge {
+  font-size: 0.95rem;
+  font-weight: 650;
+  letter-spacing: 0.015em;
+  padding: 0.35rem 0.95rem;
+}
+
+html[lang="en"] .btn,
+html:not([lang="ta"]) .btn,
+html[lang="en"] .nav-btn,
+html:not([lang="ta"]) .nav-btn {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+html[lang="en"] b,
+html[lang="en"] strong,
+html:not([lang="ta"]) b,
+html:not([lang="ta"]) strong {
+  font-weight: 800;
+  font-size: 1.06em;
+}
+
+html[lang="en"] .hero-features span,
+html:not([lang="ta"]) .hero-features span {
+  font-size: 0.85rem !important;
+  font-weight: 750;
+}
+
+html[lang="en"] .cta-box h2,
+html:not([lang="ta"]) .cta-box h2 {
+  font-size: clamp(2.15rem, 4.2vw, 2.75rem);
+  font-weight: 800;
+}
+
+/* ==================================================
+   ENGLISH MOBILE RESPONSIVE TYPOGRAPHY
+   Keep regular text clean/compact while bold letters remain strong & larger
+================================================== */
+@media (max-width: 768px) {
+  /* Hero Title (Bold letters larger & punchier on mobile) */
+  html[lang="en"] .hero-title,
+  html:not([lang="ta"]) .hero-title {
+    font-size: clamp(2.15rem, 7.8vw, 2.75rem);
+    font-weight: 800;
+    line-height: 1.18;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+  }
+
+  html[lang="en"] .hero-description,
+  html:not([lang="ta"]) .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+  }
+
+  html[lang="en"] .hero-content .badge,
+  html:not([lang="ta"]) .hero-content .badge {
+    font-size: 0.875rem;
+    font-weight: 650;
+    padding: 0.38rem 0.95rem;
+  }
+
+  html[lang="en"] .hero-buttons .btn,
+  html:not([lang="ta"]) .hero-buttons .btn {
+    font-size: 1.025rem;
+    font-weight: 700;
+    padding: 0.75rem 1.6rem;
+    min-height: 48px;
+  }
+
+  html[lang="en"] .hero-features span,
+  html:not([lang="ta"]) .hero-features span {
+    font-size: 0.8rem !important;
+    font-weight: 750;
+    line-height: 1.35;
+  }
+
+  /* Section Titles & Subtitles */
+  html[lang="en"] .section-title,
+  html:not([lang="ta"]) .section-title {
+    font-size: clamp(1.8rem, 6.5vw, 2.35rem);
+    font-weight: 800;
+    line-height: 1.22;
+    letter-spacing: -0.015em;
+  }
+
+  html[lang="en"] .section-subtitle,
+  html:not([lang="ta"]) .section-subtitle {
+    font-size: 0.925rem;
+    line-height: 1.6;
+    margin-bottom: 1.85rem;
+  }
+
+  /* Cards & Components */
+  html[lang="en"] .reason-title,
+  html:not([lang="ta"]) .reason-title {
+    font-size: 1.225rem;
+    font-weight: 750;
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+  }
+
+  html[lang="en"] .reason-description,
+  html:not([lang="ta"]) .reason-description {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  html[lang="en"] .feature-name,
+  html:not([lang="ta"]) .feature-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  html[lang="en"] .step-title,
+  html:not([lang="ta"]) .step-title {
+    font-size: 1.175rem;
+    font-weight: 750;
+    line-height: 1.35;
+    margin-bottom: 0.35rem;
+  }
+
+  html[lang="en"] .step-number,
+  html:not([lang="ta"]) .step-number {
+    font-size: 1.85rem;
+    font-weight: 800;
+  }
+
+  html[lang="en"] .step-desc,
+  html:not([lang="ta"]) .step-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+  }
+
+  html[lang="en"] .reports-list li,
+  html:not([lang="ta"]) .reports-list li {
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+
+  html[lang="en"] .security-badge-item,
+  html:not([lang="ta"]) .security-badge-item {
+    font-size: 0.925rem;
+    font-weight: 650;
+  }
+
+  /* CTA Section */
+  html[lang="en"] .cta-box h2,
+  html:not([lang="ta"]) .cta-box h2 {
+    font-size: clamp(1.75rem, 6vw, 2.35rem);
+    font-weight: 800;
+    line-height: 1.22;
+  }
+
+  html[lang="en"] .cta-box p,
+  html:not([lang="ta"]) .cta-box p {
+    font-size: 0.925rem;
+    line-height: 1.6;
+  }
+
+  html[lang="en"] .cta-buttons .btn,
+  html:not([lang="ta"]) .cta-buttons .btn {
+    font-size: 1.025rem;
+    font-weight: 700;
+  }
+
+  /* Navigation */
+  html[lang="en"] .mobile-nav-link,
+  html:not([lang="ta"]) .mobile-nav-link {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  html[lang="en"] .mobile-nav-btn,
+  html:not([lang="ta"]) .mobile-nav-btn {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  /* Contact & Form */
+  html[lang="en"] .contact-banner-content h1,
+  html:not([lang="ta"]) .contact-banner-content h1 {
+    font-size: clamp(1.95rem, 6.2vw, 2.5rem) !important;
+    font-weight: 800;
+  }
+
+  html[lang="en"] .contact-banner-content p,
+  html:not([lang="ta"]) .contact-banner-content p {
+    font-size: 0.95rem !important;
+  }
+
+  html[lang="en"] .contact-form label,
+  html:not([lang="ta"]) .contact-form label {
+    font-size: 0.9rem;
+    font-weight: 650;
+  }
+
+  html[lang="en"] .contact-form input,
+  html[lang="en"] .contact-form textarea,
+  html:not([lang="ta"]) .contact-form input,
+  html:not([lang="ta"]) .contact-form textarea {
+    font-size: 0.9rem;
+  }
+
+  html[lang="en"] .contact-form button,
+  html:not([lang="ta"]) .contact-form button {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  /* Footer */
+  html[lang="en"] .footer-desc,
+  html:not([lang="ta"]) .footer-desc {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  html[lang="en"] .link-group h4,
+  html:not([lang="ta"]) .link-group h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+
+  html[lang="en"] .link-group a,
+  html:not([lang="ta"]) .link-group a {
+    font-size: 0.875rem;
+  }
+
+  html[lang="en"] .footer-bottom,
+  html:not([lang="ta"]) .footer-bottom {
+    font-size: 0.8rem;
+  }
+}
+
+/* English Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  html[lang="en"] .hero-title,
+  html:not([lang="ta"]) .hero-title {
+    font-size: clamp(1.85rem, 7vw, 2.35rem);
+    line-height: 1.2;
+  }
+
+  html[lang="en"] .hero-content .badge,
+  html:not([lang="ta"]) .hero-content .badge {
+    font-size: 0.825rem;
+    padding: 0.35rem 0.85rem;
+  }
+
+  html[lang="en"] .section-title,
+  html:not([lang="ta"]) .section-title {
+    font-size: clamp(1.6rem, 6vw, 2rem);
+  }
+
+  html[lang="en"] .reason-title,
+  html:not([lang="ta"]) .reason-title {
+    font-size: 1.175rem;
+  }
+
+  html[lang="en"] .step-title,
+  html:not([lang="ta"]) .step-title {
+    font-size: 1.125rem;
+  }
+
+  html[lang="en"] .step-number,
+  html:not([lang="ta"]) .step-number {
+    font-size: 1.7rem;
+  }
+
+  html[lang="en"] .cta-box h2,
+  html:not([lang="ta"]) .cta-box h2 {
+    font-size: 1.6rem;
+  }
+
+  html[lang="en"] .hero-features span,
+  html:not([lang="ta"]) .hero-features span {
+    font-size: 0.775rem !important;
+  }
+}
+
+/* ==================================================
    BOOK DEMO MODAL
 ================================================== */
+body.modal-open,
+html.modal-open {
+  overflow: hidden !important;
+  touch-action: none;
+}
+
 .book-demo-overlay {
   position: fixed;
   top: 0;
@@ -2354,6 +2786,8 @@ html[lang="ta"] .footer-bottom {
   justify-content: center;
   padding: 1.25rem;
   overflow-y: auto;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
   animation: fadeIn 0.25s ease-out;
 }
 
@@ -2466,6 +2900,10 @@ html[lang="ta"] .footer-bottom {
   flex-direction: column;
   gap: 0.35rem;
   text-align: left;
+}
+
+.demo-field-group.full-width {
+  grid-column: 1 / -1;
 }
 
 .demo-field-group label {

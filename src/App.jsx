@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WhyChooseUs from './components/WhyChooseUs';
@@ -10,6 +10,16 @@ import Security from './components/Security';
 import CTA from './components/CTA';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 const HomePage = () => (
   <>
@@ -23,8 +33,9 @@ const HomePage = () => (
 function App() {
   return (
     <div className="app-container">
+      <ScrollToTop />
       <Navbar />
-      <main>
+      <main className="main-content">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/features" element={<Features />} />

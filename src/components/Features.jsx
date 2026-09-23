@@ -24,7 +24,7 @@ const Features = () => {
   const items = Array.isArray(featureNames) ? featureNames : [];
 
   return (
-    <section className="section" id="features">
+    <section className="section page-section" id="features">
       <div className="container">
         <div className="text-center">
           <div className="badge">{t('features.badge')}</div>

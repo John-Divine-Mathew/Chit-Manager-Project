@@ -9,8 +9,7 @@ const BookDemoModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     fullName: '',
     businessName: '',
-    mobileNumber: '',
-    activeGroups: ''
+    mobileNumber: ''
   });
 
   const [errors, setErrors] = useState({});
@@ -24,8 +23,7 @@ const BookDemoModal = ({ isOpen, onClose }) => {
       setFormData({
         fullName: '',
         businessName: '',
-        mobileNumber: '',
-        activeGroups: ''
+        mobileNumber: ''
       });
       setErrors({});
       setIsSubmitted(false);
@@ -33,7 +31,7 @@ const BookDemoModal = ({ isOpen, onClose }) => {
     }, 300);
   }, [onClose]);
 
-  // Close on Escape key and handle body scroll lock
+  // Close on Escape key and lock background scroll completely
   useEffect(() => {
     if (!isOpen) return;
 
@@ -44,11 +42,25 @@ const BookDemoModal = ({ isOpen, onClose }) => {
     };
 
     window.addEventListener('keydown', handleKeyDown);
+
+    // Freeze background scroll
+    const prevBodyOverflow = document.body.style.overflow;
+    const prevHtmlOverflow = document.documentElement.style.overflow;
+    const prevTouchAction = document.body.style.touchAction;
+
+    document.body.classList.add('modal-open');
+    document.documentElement.classList.add('modal-open');
     document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.touchAction = 'none';
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = 'unset';
+      document.body.classList.remove('modal-open');
+      document.documentElement.classList.remove('modal-open');
+      document.body.style.overflow = prevBodyOverflow;
+      document.documentElement.style.overflow = prevHtmlOverflow;
+      document.body.style.touchAction = prevTouchAction;
     };
   }, [isOpen, handleClose]);
 
@@ -82,10 +94,6 @@ const BookDemoModal = ({ isOpen, onClose }) => {
       newErrors.mobileNumber = t('bookDemo.validation.mobile');
     }
 
-    if (!formData.activeGroups) {
-      newErrors.activeGroups = t('bookDemo.validation.activeGroups');
-    }
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -103,17 +111,25 @@ const BookDemoModal = ({ isOpen, onClose }) => {
   };
 
   const getWhatsAppMessage = () => {
-    if (language === 'ta') {
-      return `வணக்கம் ChitManager குழுவினருக்கு,\n\nChitManager மென்பொருளுக்கான தனிப்பயன் டெமோவை முன்பதிவு செய்ய விரும்புகிறேன்.\n\nபெயர்: ${formData.fullName}\nவணிகம் / சீட்டு நிதி: ${formData.businessName}\nமொபைல் / WhatsApp: ${formData.mobileNumber}\nசெயலில் உள்ள சீட்டு குழுக்கள்: ${formData.activeGroups}\n\nChitManager பற்றிய கூடுதல் தகவல்களை அறிந்து, எனக்கு ஏற்ற டெமோ நேரத்தை திட்டமிட விரும்புகிறேன்.\n\nநன்றி.`;
-    }
+    return `*New Demo Request | Chit Master Pro*
 
-    return `Hello ChitManager Team,\n\nI would like to book a personalized demo.\n\nName: ${formData.fullName}\nBusiness / Chit Fund: ${formData.businessName}\nMobile / WhatsApp: ${formData.mobileNumber}\nActive Chit Groups: ${formData.activeGroups}\n\nI would like to know more about ChitManager and schedule a suitable demo time.\n\nThank you.`;
+Hello Chit Master Pro Team,
+
+I would like to request a demo of the Chit Master Pro software.
+
+*Business Details:*
+• *Full Name:* ${formData.fullName}
+• *Business / Chit Fund:* ${formData.businessName}
+• *Mobile / WhatsApp:* ${formData.mobileNumber}
+
+Kindly send the credentials of the software.
+When is a good time to connect with the team of Chit Master Pro?
+
+Regards,
+*${formData.fullName}*`;
   };
 
   const whatsappUrl = `https://wa.me/${BUSINESS_CONFIG.whatsappNumber}?text=${encodeURIComponent(getWhatsAppMessage())}`;
-
-  const activeGroupOptions = t('bookDemo.activeGroupOptions');
-  const optionsList = Array.isArray(activeGroupOptions) ? activeGroupOptions : ['1–5', '6–20', '20+'];
 
   if (!isOpen) return null;
 
@@ -190,7 +206,7 @@ const BookDemoModal = ({ isOpen, onClose }) => {
                 </div>
 
                 {/* Mobile / WhatsApp Number */}
-                <div className="demo-field-group">
+                <div className="demo-field-group full-width">
                   <label htmlFor="demo-mobile">
                     <span>{t('bookDemo.mobile')}</span>&nbsp;<span className="text-danger">*</span>
                   </label>
@@ -206,25 +222,6 @@ const BookDemoModal = ({ isOpen, onClose }) => {
                     onChange={(e) => handleInputChange('mobileNumber', e.target.value)}
                   />
                   {errors.mobileNumber && <span className="field-error-msg">{errors.mobileNumber}</span>}
-                </div>
-
-                {/* Number of Active Chit Groups */}
-                <div className="demo-field-group">
-                  <label htmlFor="demo-active-groups">
-                    <span>{t('bookDemo.activeGroups')}</span>&nbsp;<span className="text-danger">*</span>
-                  </label>
-                  <select
-                    id="demo-active-groups"
-                    className={`demo-select ${errors.activeGroups ? 'has-error' : ''}`}
-                    value={formData.activeGroups}
-                    onChange={(e) => handleInputChange('activeGroups', e.target.value)}
-                  >
-                    <option value="">{t('bookDemo.activeGroupsPlaceholder')}</option>
-                    {optionsList.map((opt) => (
-                      <option key={opt} value={opt}>{opt}</option>
-                    ))}
-                  </select>
-                  {errors.activeGroups && <span className="field-error-msg">{errors.activeGroups}</span>}
                 </div>
               </div>
 

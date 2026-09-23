@@ -7,7 +7,7 @@ const Contact = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="section section-light" id="contact" style={{ position: 'relative', backgroundColor: '#f8fafc' }}>
+    <section className="section section-light page-section" id="contact" style={{ position: 'relative', backgroundColor: '#f8fafc' }}>
       
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div className="contact-banner-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', alignItems: 'center', marginBottom: '4rem', padding: '2rem 0' }}>

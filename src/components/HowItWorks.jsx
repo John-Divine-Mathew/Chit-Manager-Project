@@ -9,7 +9,7 @@ const HowItWorks = () => {
   const steps = Array.isArray(stepsList) ? stepsList : [];
 
   return (
-    <section className="section section-light" id="how-it-works" style={{ position: 'relative', overflow: 'hidden', backgroundColor: '#f8fafc' }}>
+    <section className="section section-light page-section" id="how-it-works" style={{ position: 'relative', overflow: 'hidden', backgroundColor: '#f8fafc' }}>
       {/* Decorative curved background */}
       <div className="how-it-works-bg-curve"></div>
       

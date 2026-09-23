@@ -9,13 +9,13 @@ export const en = {
     logoAlt: "Chit Master Pro Logo"
   },
   hero: {
-    badge: "Introducing ChitMaster 2.0",
+    badge: "Introducing Chit Master Pro",
     titleLine1: "Smart Chit Management,",
     titleLine2: "Made Simple.",
     description: "Manage chit groups, members, collections, auctions and reports from one powerful platform. Built for modern chit fund businesses.",
     getStarted: "Get Started",
     requestDemo: "Request Demo",
-    previewAlt: "ChitMaster App Preview",
+    previewAlt: "Chit Master Pro App Preview",
     features: {
       secure: "100%\nSecure",
       processing: "Fast\nProcessing",
@@ -24,7 +24,7 @@ export const en = {
     }
   },
   whyChooseUs: {
-    badge: "Why ChitMaster?",
+    badge: "Why Chit Master Pro?",
     title: "Built for Modern Chit Funds",
     subtitle: "We understand the complexities of running a chit fund business. That's why we built a platform that simplifies everything.",
     reasons: [
@@ -66,7 +66,7 @@ export const en = {
     badge: "Simple Process",
     title: "How It Works",
     subtitle: "Streamline your workflow in 5 simple steps.",
-    imageAlt: "ChitFlow App Interface",
+    imageAlt: "Chit Master Pro App Interface",
     steps: [
       {
         number: "01",
@@ -99,7 +99,7 @@ export const en = {
     badge: "Detailed Analytics",
     title: "Comprehensive Reports at Your Fingertips",
     subtitle: "Generate accurate and insightful reports instantly. Export data to PDF or Excel with a single click for your accounting needs.",
-    imageAlt: "ChitManager Reports",
+    imageAlt: "Chit Master Pro Reports",
     items: [
       "Collection Report",
       "Member Ledger",
@@ -123,14 +123,14 @@ export const en = {
   },
   cta: {
     title: "Manage Your Chit Business Smarter",
-    description: "Bring members, payments, auctions and reports together in one simple platform. Stop using spreadsheets and WhatsApp. Upgrade to ChitMaster today.",
+    description: "Bring members, payments, auctions and reports together in one simple platform. Stop using spreadsheets and WhatsApp. Upgrade to Chit Master Pro today.",
     startTrial: "Start Free Trial",
     talkSales: "Talk to Sales"
   },
   contact: {
     titlePrefix: "Get in Touch",
     titleWith: "with",
-    titleBrand: "ChitManager",
+    titleBrand: "Chit Master Pro",
     subtitle: "Have a question, need support, or want to partner with us? We're here to help.",
     agentAlt: "Support Agent",
     callUs: "Call Us",
@@ -187,23 +187,19 @@ export const en = {
   },
   bookDemo: {
     modalTitle: "Book a Personalized Demo",
-    modalSubtitle: "See how ChitManager can simplify your chit fund management and help your team work more efficiently.",
+    modalSubtitle: "See how Chit Master Pro can simplify your chit fund management and help your team work more efficiently.",
     fullName: "Full Name",
     fullNamePlaceholder: "Enter your full name",
     businessName: "Business / Chit Fund Name",
     businessNamePlaceholder: "Enter business or chit fund name",
     mobile: "Mobile / WhatsApp Number",
     mobilePlaceholder: "10-digit mobile number",
-    activeGroups: "Active Chit Groups",
-    activeGroupsPlaceholder: "Select group count",
-    activeGroupOptions: ["1–5 Groups", "6–20 Groups", "20+ Groups"],
     submitButton: "Request Demo",
     submitting: "Submitting...",
     validation: {
       fullName: "Please enter your full name.",
       businessName: "Please enter your business or chit fund name.",
-      mobile: "Please enter a valid 10-digit mobile number.",
-      activeGroups: "Please select the number of active chit groups."
+      mobile: "Please enter a valid 10-digit mobile number."
     },
     success: {
       title: "Demo Request Received!",
@@ -212,8 +208,8 @@ export const en = {
       continueWhatsApp: "Continue on WhatsApp"
     },
     closeAria: "Close modal",
-    whatsappGreeting: "Hello ChitManager Team,",
+    whatsappGreeting: "Hello Chit Master Pro Team,",
     whatsappInterest: "I would like to book a personalized demo.",
-    whatsappClosing: "I would like to know more about ChitManager and schedule a suitable demo time.\n\nThank you."
+    whatsappClosing: "I would like to know more about Chit Master Pro and schedule a suitable demo time.\n\nThank you."
   }
 };
