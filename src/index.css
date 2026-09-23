@@ -26,6 +26,9 @@ html {
   scroll-behavior: smooth; 
   scroll-padding-top: 80px;
 }
+section[id] {
+  scroll-margin-top: 85px;
+}
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-color);
@@ -239,9 +242,47 @@ p { color: var(--text-muted); }
 .status-badge.completed { background: rgba(16,185,129,0.1); color: var(--primary); }
 
 /* Security */
-.security-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; max-width: 800px; margin: 0 auto; }
-.security-badge-item { display: flex; align-items: center; gap: 0.75rem; background: white; padding: 1rem 1.5rem; border-radius: 999px; box-shadow: var(--shadow-sm); font-weight: 500; }
-.security-icon { color: var(--primary); }
+.security-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.security-badge-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: white;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  font-weight: 500;
+  text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.security-badge-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -4px rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.security-badge-item span {
+  text-align: left;
+  line-height: 1.35;
+}
+
+.security-icon {
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
 
 /* CTA */
 .cta-section { padding: 6rem 0; }
@@ -348,8 +389,28 @@ p { color: var(--text-muted); }
   .export-buttons button { flex: 1; }
 
   /* Security */
-  .security-badges { flex-direction: column; align-items: stretch; }
-  .security-badge-item { justify-content: flex-start; }
+  .security-badges {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    max-width: 380px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .security-badge-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    width: 100%;
+    padding: 0.85rem 1.25rem;
+    box-sizing: border-box;
+  }
+  .security-badge-item span {
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
 
   /* Contact */
   .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -1091,13 +1152,25 @@ html[lang="ta"] .footer-bottom {
     flex-direction: column;
     align-items: stretch;
     gap: 0.75rem;
+    max-width: 380px;
+    margin: 0 auto;
+    width: 100%;
   }
   html[lang="ta"] .security-badge-item {
+    display: flex;
+    align-items: center;
     justify-content: flex-start;
+    text-align: left;
     padding: 0.85rem 1.25rem;
-    font-size: 0.925rem;
-    line-height: 1.4;
     width: 100%;
+    box-sizing: border-box;
+  }
+  html[lang="ta"] .security-badge-item span {
+    text-align: left;
+    font-family: "Noto Sans Tamil", "Noto Sans", system-ui, sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.35;
+    font-weight: 500;
   }
   html[lang="ta"] .security-icon {
     flex-shrink: 0;
