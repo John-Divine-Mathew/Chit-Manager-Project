@@ -15,9 +15,6 @@ const CTA = () => {
             <button className="btn btn-primary cta-btn">
               {t('cta.startTrial')} <ArrowRight size={18} />
             </button>
-            <button className="btn btn-outline cta-btn-outline">
-              {t('cta.talkSales')}
-            </button>
           </div>
         </div>
       </div>
