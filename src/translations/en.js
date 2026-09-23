@@ -6,7 +6,7 @@ export const en = {
     reports: "Reports",
     contact: "Contact",
     getStarted: "Get Started",
-    logoAlt: "ChitManager Logo"
+    logoAlt: "Chit Master Pro Logo"
   },
   hero: {
     badge: "Introducing ChitMaster 2.0",
@@ -149,7 +149,7 @@ export const en = {
   },
   footer: {
     description: "The complete operating system for modern chit fund businesses. Manage smarter, grow faster.",
-    logoAlt: "ChitManager Logo",
+    logoAlt: "Chit Master Pro Logo",
     product: "Product",
     features: "Features",
     reports: "Reports",
@@ -163,7 +163,7 @@ export const en = {
     legal: "Legal",
     privacyPolicy: "Privacy Policy",
     termsOfService: "Terms of Service",
-    copyright: "ChitMaster Inc. All rights reserved."
+    copyright: "Chit Master Pro Inc. All rights reserved."
   },
   dashboardPreview: {
     overview: "Overview",

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Globe, MessageCircle, Share2, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import logoImg from '../assets/logo.png';
+import footerLogo from '../assets/footer-logo.png';
 import { useLanguage } from '../context/LanguageContext';
 
 const Footer = () => {
@@ -11,9 +11,9 @@ const Footer = () => {
     <footer className="footer">
       <div className="container footer-container">
         <div className="footer-brand">
-          <div className="logo">
-            <img src={logoImg} alt={t('footer.logoAlt')} className="logo-img" />
-          </div>
+          <Link to="/" className="footer-logo">
+            <img src={footerLogo} alt={t('footer.logoAlt')} className="footer-logo-img" />
+          </Link>
           <p className="footer-desc">
             {t('footer.description')}
           </p>

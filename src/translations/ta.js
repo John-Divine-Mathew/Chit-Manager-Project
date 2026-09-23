@@ -6,7 +6,7 @@ export const ta = {
     reports: "அறிக்கைகள்",
     contact: "தொடர்பு",
     getStarted: "தொடங்குங்கள்",
-    logoAlt: "ChitManager லோகோ"
+    logoAlt: "Chit Master Pro லோகோ"
   },
   hero: {
     badge: "ChitMaster 2.0 அறிமுகம்",
@@ -149,7 +149,7 @@ export const ta = {
   },
   footer: {
     description: "நவீன சிட் ஃபண்ட் வணிகங்களுக்கான முழுமையான இயக்க முறைமை (OS). புத்திசாலித்தனமாக நிர்வகியுங்கள், விரைவாக வளருங்கள்.",
-    logoAlt: "ChitManager லோகோ",
+    logoAlt: "Chit Master Pro லோகோ",
     product: "தயாரிப்பு",
     features: "அம்சங்கள்",
     reports: "அறிக்கைகள்",
@@ -163,7 +163,7 @@ export const ta = {
     legal: "சட்டம்",
     privacyPolicy: "தனியுரிமைக் கொள்கை",
     termsOfService: "சேவை விதிமுறைகள்",
-    copyright: "ChitMaster Inc. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."
+    copyright: "Chit Master Pro Inc. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."
   },
   dashboardPreview: {
     overview: "கண்ணோட்டம்",

@@ -838,6 +838,26 @@ p {
   color: var(--primary);
 }
 
+.footer-logo {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.footer-logo-img {
+  height: 64px;
+  width: auto;
+  max-width: 250px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 4px 14px rgba(37, 99, 235, 0.25));
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.footer-logo:hover .footer-logo-img {
+  transform: translateY(-2px);
+  filter: drop-shadow(0 6px 18px rgba(37, 99, 235, 0.35));
+}
+
 .footer-desc {
   color: var(--text-muted);
   margin: 1.5rem 0;
@@ -1229,9 +1249,24 @@ p {
   .footer-brand .footer-desc {
     max-width: 100%;
   }
+
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-logo-img {
+    height: 56px;
+    max-width: 220px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 480px) {
+  .footer-logo-img {
+    height: 48px;
+    max-width: 190px;
+  }
 
   /* Ensure dummy chart doesn't overflow */
   .chart-card .dummy-chart {
@@ -1273,9 +1308,15 @@ p {
 
 /* Restored styles for logo and new sections */
 .logo-img {
-  height: 65px;
+  height: 52px;
   width: auto;
   object-fit: contain;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.logo:hover .logo-img {
+  transform: scale(1.02);
 }
 
 /* How It Works Grid */
