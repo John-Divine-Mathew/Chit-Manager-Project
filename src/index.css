@@ -71,29 +71,31 @@ button {
 
 /* Standalone Route Pages Top Clearance (Ensures content is never underlaid by fixed navbar) */
 .page-section,
-main > section:first-child:not(.hero),
-.main-content > section:first-child:not(.hero) {
+main>section:first-child:not(.hero),
+.main-content>section:first-child:not(.hero) {
   padding-top: 5.75rem !important;
 }
 
 @media (max-width: 768px) {
+
   .page-section,
-  main > section:first-child:not(.hero),
-  .main-content > section:first-child:not(.hero),
+  main>section:first-child:not(.hero),
+  .main-content>section:first-child:not(.hero),
   html[lang="ta"] .page-section,
-  html[lang="ta"] main > section:first-child:not(.hero),
-  html[lang="ta"] .main-content > section:first-child:not(.hero) {
+  html[lang="ta"] main>section:first-child:not(.hero),
+  html[lang="ta"] .main-content>section:first-child:not(.hero) {
     padding-top: 6rem !important;
   }
 }
 
 @media (max-width: 480px) {
+
   .page-section,
-  main > section:first-child:not(.hero),
-  .main-content > section:first-child:not(.hero),
+  main>section:first-child:not(.hero),
+  .main-content>section:first-child:not(.hero),
   html[lang="ta"] .page-section,
-  html[lang="ta"] main > section:first-child:not(.hero),
-  html[lang="ta"] .main-content > section:first-child:not(.hero) {
+  html[lang="ta"] main>section:first-child:not(.hero),
+  html[lang="ta"] .main-content>section:first-child:not(.hero) {
     padding-top: 5.85rem !important;
   }
 }
@@ -2637,6 +2639,7 @@ html:not([lang="ta"]) .cta-box h2 {
    Keep regular text clean/compact while bold letters remain strong & larger
 ================================================== */
 @media (max-width: 768px) {
+
   /* Hero Title (Bold letters larger & punchier on mobile) */
   html[lang="en"] .hero-title,
   html:not([lang="ta"]) .hero-title {
@@ -2842,6 +2845,7 @@ html:not([lang="ta"]) .cta-box h2 {
 
 /* English Small Mobile (max-width: 480px) */
 @media (max-width: 480px) {
+
   html[lang="en"] .hero-title,
   html:not([lang="ta"]) .hero-title {
     font-size: clamp(1.85rem, 7vw, 2.35rem);

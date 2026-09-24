@@ -44,7 +44,7 @@ export const LanguageProvider = ({ children }) => {
   const t = (key) => {
     const currentDict = translations[language] || translations.en;
     let value = getNestedValue(currentDict, key);
-    
+
     // Fallback to English if not found in current dictionary
     if (value === undefined && language !== 'en') {
       value = getNestedValue(translations.en, key);

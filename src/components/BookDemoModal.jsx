@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { BUSINESS_CONFIG } from '../config/constants';
 
 const BookDemoModal = ({ isOpen, onClose }) => {
-  const { language, t } = useLanguage();
+  const { t } = useLanguage();
 
   const [formData, setFormData] = useState({
     fullName: '',
