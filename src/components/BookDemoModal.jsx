@@ -134,7 +134,7 @@ Regards,
   if (!isOpen) return null;
 
   return (
-    <div 
+    <div
       className="book-demo-overlay"
       onClick={(e) => {
         if (e.target === e.currentTarget) handleClose();
@@ -144,9 +144,9 @@ Regards,
       aria-labelledby="book-demo-title"
     >
       <div className="book-demo-modal">
-        <button 
-          type="button" 
-          className="modal-close-btn" 
+        <button
+          type="button"
+          className="modal-close-btn"
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
@@ -210,24 +210,27 @@ Regards,
                   <label htmlFor="demo-mobile">
                     <span>{t('bookDemo.mobile')}</span>&nbsp;<span className="text-danger">*</span>
                   </label>
-                  <input
-                    id="demo-mobile"
-                    type="tel"
-                    inputMode="numeric"
-                    pattern="[0-9]*"
-                    maxLength={10}
-                    className={`demo-input ${errors.mobileNumber ? 'has-error' : ''}`}
-                    placeholder={t('bookDemo.mobilePlaceholder')}
-                    value={formData.mobileNumber}
-                    onChange={(e) => handleInputChange('mobileNumber', e.target.value)}
-                  />
+                  <div className={`demo-phone-wrapper ${errors.mobileNumber ? 'has-error' : ''}`}>
+                    <span className="demo-phone-prefix">+91</span>
+                    <input
+                      id="demo-mobile"
+                      type="tel"
+                      inputMode="numeric"
+                      pattern="[0-9]*"
+                      maxLength={10}
+                      className={`demo-input demo-phone-input ${errors.mobileNumber ? 'has-error' : ''}`}
+                      placeholder={t('bookDemo.mobilePlaceholder')}
+                      value={formData.mobileNumber}
+                      onChange={(e) => handleInputChange('mobileNumber', e.target.value)}
+                    />
+                  </div>
                   {errors.mobileNumber && <span className="field-error-msg">{errors.mobileNumber}</span>}
                 </div>
               </div>
 
               <div className="demo-modal-footer">
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="btn btn-primary demo-submit-btn"
                   disabled={isSubmitting}
                 >

@@ -2921,7 +2921,7 @@ html.modal-open {
 .book-demo-modal {
   position: relative;
   width: 100%;
-  max-width: 630px;
+  max-width: 480px;
   background-color: #ffffff;
   border-radius: 1.25rem;
   border: 1px solid var(--border-color);
@@ -3015,11 +3015,10 @@ html.modal-open {
 }
 
 .demo-form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
   margin-bottom: 1.75rem;
-  align-items: start;
 }
 
 .demo-field-group {
@@ -3027,10 +3026,51 @@ html.modal-open {
   flex-direction: column;
   gap: 0.35rem;
   text-align: left;
+  width: 100%;
 }
 
 .demo-field-group.full-width {
-  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.demo-phone-wrapper {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.demo-phone-prefix {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.85rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background-color: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-right: none;
+  border-top-left-radius: 0.65rem;
+  border-bottom-left-radius: 0.65rem;
+  user-select: none;
+  transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+}
+
+.demo-phone-input {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.demo-phone-wrapper:focus-within .demo-phone-prefix {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.demo-phone-wrapper.has-error .demo-phone-prefix,
+.demo-phone-wrapper:has(.has-error) .demo-phone-prefix {
+  border-color: #ef4444;
+  color: #ef4444;
+  background-color: #fffbfa;
 }
 
 .demo-field-group label {
@@ -3184,7 +3224,6 @@ html.modal-open {
   }
 
   .demo-form-grid {
-    grid-template-columns: 1fr;
     gap: 0.9rem;
     margin-bottom: 1.5rem;
   }
